@@ -4,7 +4,7 @@ import json
 import os
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
-
+from selenium.webdriver.common.by import By
 
 # 虚拟出Chrome界面
 chrome_options = Options()
@@ -32,14 +32,14 @@ driver.get("https://neworld.cloud/auth/login")
 #  获取cookies 
 time.sleep(5)
 # 账号密码登录版本
-driver.find_element_by_id('email').clear()
-driver.find_element_by_id("email").send_keys(u)
+driver.find_element(By.ID, 'email').clear()
+driver.find_element(By.ID, "email").send_keys(u)
 
-driver.find_element_by_id('passwd').clear()
-driver.find_element_by_id("passwd").send_keys(p)
+driver.find_element(By.ID, 'passwd').clear()
+driver.find_element(By.ID, "passwd").send_keys(p)
 
 time.sleep(1)
-driver.find_element_by_id("login-dashboard").click()
+driver.find_element(By.ID, "login-dashboard").click()
 
 driver.refresh()#刷新页面 
 
@@ -51,4 +51,4 @@ driver.refresh()#刷新页面
 # buttons = driver.find_element_by_xpath("//button[@id='checkin']")
 # print('buttons',buttons)
 
-driver.find_element_by_id("check-in").click() # 点击元素
+driver.find_element(By.ID, "check-in").click() # 点击元素
