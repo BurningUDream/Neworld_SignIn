@@ -13,7 +13,7 @@ chrome_options.add_argument('--window-size=1420,1080')
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-gpu')
 # action  linux服务器驱动地址
-driver = webdriver.Chrome(service='/home/runner/work/Neworld_SignIn/Neworld_SignIn/driver/chromedriver',chrome_options=chrome_options)    # Chrome浏览器  
+driver = webdriver.Chrome(service='/home/runner/work/Neworld_SignIn/Neworld_SignIn/driver/chromedriver',options=chrome_options)    # Chrome浏览器  
 # driver = webdriver.Chrome(service='/home/runner/work/Neworld_SignIn/Neworld_SignIn/driver/chromedriver')    # Chrome浏览器  
 
 # windows 系统驱动路径
