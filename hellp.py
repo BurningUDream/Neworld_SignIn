@@ -30,7 +30,7 @@ print('u',u)
 print('p',p)
 driver.get("https://neworld.tv/auth/login") 
 #  获取cookies 
-time.sleep(5)
+time.sleep(50)
 # 账号密码登录版本
 driver.find_element(By.ID, 'email').clear()
 driver.find_element(By.ID, "email").send_keys(u)
@@ -38,7 +38,7 @@ driver.find_element(By.ID, "email").send_keys(u)
 driver.find_element(By.ID, 'passwd').clear()
 driver.find_element(By.ID, "passwd").send_keys(p)
 
-time.sleep(1)
+time.sleep(2)
 driver.find_element(By.ID, "login-dashboard").click()
 
 driver.refresh()#刷新页面 
@@ -46,7 +46,7 @@ driver.refresh()#刷新页面
 
 driver.refresh()#刷新页面 
 
-# time.sleep(5)
+time.sleep(50)
 
 # buttons = driver.find_element_by_xpath("//button[@id='checkin']")
 # print('buttons',buttons)
