@@ -52,3 +52,9 @@ time.sleep(50)
 # print('buttons',buttons)
 
 driver.find_element(By.ID, "check-in").click() # 点击元素
+
+time.sleep(10)
+
+# 获取页面源代码
+page_source = driver.page_source
+print("page_source:\n " + page_source)
