@@ -40,10 +40,10 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
-        sudo pip install pyvirtualdisplay;
-        python -m pip install --upgrade pip
-        pip install setuptools wheel twine
-        pip install selenium
+        sudo pipx install pyvirtualdisplay;
+        python -m pipx install --upgrade pipx
+        pipx install setuptools wheel twine
+        pipx install selenium
         whereis  chromedriver
         cd /home/runner/work/Neworld_SignIn/Neworld_SignIn/driver
         sudo chmod +x chromedriver
