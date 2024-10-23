@@ -40,8 +40,8 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
-        sudo pipx install pyvirtualdisplay;
-        python -m pipx install --upgrade pipx
+        sudo pip install pyvirtualdisplay;
+        python -m pip install --upgrade pip
         pipx install setuptools wheel twine
         pipx install selenium
         whereis  chromedriver
