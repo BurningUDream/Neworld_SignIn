@@ -2,13 +2,12 @@ from selenium import webdriver
 import time
 import json
 import os
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromiumService
+from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.os_manager import ChromeType
+
 
 # 虚拟出Chrome界面
 chrome_options = Options()
@@ -18,11 +17,14 @@ chrome_options.add_argument('--window-size=1420,1080')
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-gpu')
 # action  linux服务器驱动地址
-service = Service(executable_path='/home/runner/work/Neworld_SignIn/Neworld_SignIn/driver/chromedriver')
+#service = Service(executable_path='/home/runner/work/Neworld_SignIn/Neworld_SignIn/driver/chromedriver')
 
+driver_path = ChromeDriverManager().install()
+print(driver_path)
+service = Service(executable_path=driver_path)
 
-driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
-#driver = webdriver.Chrome(service=service, options=chrome_options)    # Chrome浏览器  
+# driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+driver = webdriver.Chrome(service=service, options=chrome_options)    # Chrome浏览器  
 # driver = webdriver.Chrome(service='/home/runner/work/Neworld_SignIn/Neworld_SignIn/driver/chromedriver')    # Chrome浏览器  
 
 # windows 系统驱动路径
