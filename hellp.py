@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromiumService
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.utils import ChromeType
+from webdriver_manager.core.os_manager import ChromeType
 
 # action  linux服务器驱动地址
 # service = Service(executable_path='/home/runner/work/Neworld_SignIn/Neworld_SignIn/driver/chromedriver')
