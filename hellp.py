@@ -26,7 +26,7 @@ p = os.environ["PASSWORD"]
 
 print('u',u)
 print('p',p)
-driver.get("https://neworld.tv/auth/login") 
+driver.get("https://neworld.cloud/auth/login") 
 #  获取cookies 
 time.sleep(50)
 # 账号密码登录版本
